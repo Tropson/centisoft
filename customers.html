@@ -3,10 +3,11 @@
 
 <head>
     <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <title>CentiSoft - Time Registration</title>
 </head>
 
-<body>
+<body onload="getCustomers()">
     <h1>All Customers</h1>
     <nav>
         <ul>
@@ -22,7 +23,19 @@
         </ul>
     </nav>
     <div>
-        <p>This will be a list of all my <strong>customers</strong>.</p>
+        <table id="table" style="min-width:40vw">
+            <thead>
+              <th>Name</th>
+              <th>Address</th>
+              <th>City</th>
+              <th>Country</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Zip</th>
+            </thead>
+            <tbody id="tablebody">
+            </tbody>
+        </table>
     </div>
     <footer>&copy; Copyright myawesome company 2017</footer>
 </body>
