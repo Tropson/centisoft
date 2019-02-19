@@ -1,16 +1,22 @@
 $(document).ready(function() {
   $("#formsubmit").click((event)=>{
     event.preventDefault();
-    $.ajax({
-        headers: {
-          "centisoft_toke":"VerySecretToken1"
-        },
-        url: `http://tropson-001-site1.itempurl.com/api/developers`,
-        method:'POST',
-        data:$("#form").serialize(),
-        'success':()=>{window.location.replace("developers.html")},
-        'error':()=>{alert("ERROR")}
-    })
+    if($("#name").val().split(' ').join('')=="" || $("#email").val().split(' ').join('')=="")
+    {
+        alert("The fields are required");
+    }
+    else{
+      $.ajax({
+          headers: {
+            "centisoft_toke":"VerySecretToken1"
+          },
+          url: `http://tropson-001-site1.itempurl.com/api/developers`,
+          method:'POST',
+          data:$("#form").serialize(),
+          'success':()=>{window.location.replace("developers.html")},
+          'error':()=>{alert("ERROR")}
+      })
+    }
   })
 });
 function redirect(id)
