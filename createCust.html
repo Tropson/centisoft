@@ -19,14 +19,21 @@
         </ul>
     </nav>
     <section>
-      <h1>Create new developer</h1>
+      <h1>Add new customer</h1>
       <div>
-        <form id="form">
+        <form id="formCustomer">
             <label for="Name">Name:</label> <input id="name" type="text" required name="Name" /><br /><br />
+            <label for="Address">Adress:</label> <input id="address" type="text" required name="Address" /><br /><br />
+            <label for="Address2">Address 2:</label> <input id="adress2" type="text" required name="Adress2" /><br /><br />
+            <label for="City">City:</label> <input id="city" type="text" required name="City" /><br /><br />
+            <label for="Zip">Zip:</label> <input id="zip" type="text" required name="Zip" /><br /><br />
+            <label for="Country">Country:</label> <input id="country" type="text" required name="Country" /><br /><br />
             <label for="Email">Email:</label> <input id="email" type="text" required name="Email" /><br /><br />
-            <input type="submit" id="formsubmit" value="Create"></input>
+
+            <input type="submit" id="customerSubmit" value="Create"></input>
         </form>
       </div>
+      <button type="button" name="button" id="test" onclick="test()">TEST</button>
     </section>
     <footer>&copy; Copyright myawesome company 2017</footer>
 </body>

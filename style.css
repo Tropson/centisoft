@@ -45,6 +45,12 @@ nav ul li a{
   color:white;
   text-decoration: none;
 }
+
+label{
+  display: inline-block;
+  width: 100px;
+}
+
 footer{
   position:relative;
   top:calc(100% + 80px);
