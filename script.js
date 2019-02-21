@@ -14,7 +14,7 @@ $(document).ready(function() {
           method:'POST',
           data:$("#form").serialize(),
           'success':()=>{window.location.replace("developers.html")},
-          'error':()=>{alert("ERROR")}
+          'error':(data)=>{console.log(data);}
       })
     }
   })
