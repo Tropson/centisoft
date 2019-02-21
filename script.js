@@ -34,7 +34,7 @@ $(document).ready(function() {
         headers:{
           "centisoft_toke":"VerySecretToken1"
         },
-        url: `http://tropson-001-site1.itempurl.com/api/customers/2`,
+        url: `http://tropson-001-site1.itempurl.com/api/customers`,
         method: 'POST',
         data: $("#formCustomer").serialize(),
         'success':()=>{window.location.replace("customers.html")},
