@@ -19,13 +19,10 @@ $(document).ready(function() {
     }
   })
 });
-function test(){
-  console.log($("#name").val().split(' ').join('')=="")
-}
 $(document).ready(function() {
   $("#customerSubmit").click((event)=>{
     event.preventDefault();
-    if($("#name").val().split(' ').join('')=="" || $("#address").val().split(' ').join('')=="" || $("#city").val().split(' ').join('')=="" || $("#zip").val().split(' ').join('')=="" || $("#country").val().split(' ').join('')=="" || $("#email").val().split(' ').join('')=="")
+    if($("#name").val().split(' ').join('')=="" || $("#address").val().split(' ').join('')=="" || $("#city").val().split(' ').join('')=="" || $("#zip").val().split(' ').join('')=="" || $("#country").val().split(' ').join('')=="" || $("#email").val().split(' ').join('')=="" || $("#phone").val().split(' ').join('')=="")
     {
       alert("The fields are required!");
     }
@@ -34,7 +31,7 @@ $(document).ready(function() {
         headers:{
           "centisoft_toke":"VerySecretToken1"
         },
-        url: `http://tropson-001-site1.itempurl.com/api/customers`,
+        url: `http://tropson-001-site1.itempurl.com/api/customers/0`,
         method: 'POST',
         data: $("#formCustomer").serialize(),
         'success':()=>{window.location.replace("customers.html")},
