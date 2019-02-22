@@ -18,8 +18,6 @@ $(document).ready(function() {
       })
     }
   })
-});
-$(document).ready(function() {
   $("#customerSubmit").click((event)=>{
     event.preventDefault();
     if($("#name").val().split(' ').join('')=="" || $("#address").val().split(' ').join('')=="" || $("#city").val().split(' ').join('')=="" || $("#zip").val().split(' ').join('')=="" || $("#country").val().split(' ').join('')=="" || $("#email").val().split(' ').join('')=="" || $("#phone").val().split(' ').join('')=="")
